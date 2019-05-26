@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IO Chat</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/socket.io/socket.io.js/"></script>
+        <script src="bignumber.min.js"></script>
+        <script src="cryptoAPI.js"></script>
+        <script src="rsa.js"></script>
+        <script src="app.js"></script>
+        
+        <style>
+            body{
+                margin-top: 30px;
+            }
+            .card{
+                margin-bottom: 10px;
+            }
+            #messageArea{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" id="userFormArea">
+                    <div class="col-md-12">
+                        <form id="userForm">
+                            <div class="form-group">
+                                <h5>Escribe un nombre de usuario</h5>
+                                <input class="form-control" id="username">
+                                <br>
+                                <input type="submit" class="btn btn-primary" value="Ingresa">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <div class="row" id="messageArea">
+                <div class="col-md-4">
+                    <div class="card card-body bg-light">
+                        <h3>Usuarios conectados</h3>
+                        <ul class="list-group" id="users"></ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="chat" id="chat"></div>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <h5>Escribe un mensaje</h5>
+                            <textarea class="form-control" id="message"></textarea>
+                            <br>
+                            <input type="submit" class="btn btn-primary" value="Envía el mensaje">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
